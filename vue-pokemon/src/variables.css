@@ -1,0 +1,126 @@
+.default {
+  --dark: rgb(30, 30, 30);
+  --light: gray;
+  --accent: rgb(238, 238, 238);
+}
+
+.pokemon-grass {
+  --dark: #096021;
+  --light: #88B695;
+  --accent: #A2D96E;
+}
+
+.pokemon-fire {
+  --dark: #601109;
+  --light: #e57373;
+  --accent: #ff9494;
+}
+
+.pokemon-grass {
+  --dark: #096021;
+  --light: #88B695;
+  --accent: #A2D96E;
+}
+
+.pokemon-fire {
+  --dark: #601109;
+  --light: #e57373;
+  --accent: #ff9494;
+}
+
+.pokemon-water {
+  --dark: #0D3C61;
+  --light: #6FB7E9;
+  --accent: #9EDCFF;
+}
+
+.pokemon-electric {
+  --dark: #6A5A00;
+  --light: #F6E27F;
+  --accent: #FFE066;
+}
+
+.pokemon-bug {
+  --dark: #3E4F1C;
+  --light: #A8C686;
+  --accent: #C7E36A;
+}
+
+.pokemon-poison {
+  --dark: #4B1363;
+  --light: #B57EDC;
+  --accent: #D8A1FF;
+}
+
+.pokemon-flying {
+  --dark: #3A4A63;
+  --light: #B0C4DE;
+  --accent: #D6ECFF;
+}
+
+.pokemon-fairy {
+  --dark: #6B2C4F;
+  --light: #F2B5D4;
+  --accent: #FFD1EA;
+}
+
+.pokemon-rock {
+  --dark: #4A3B2A;
+  --light: #B8A48C;
+  --accent: #D8CFC4;
+}
+
+.pokemon-ground {
+  --dark: #5A3E1B;
+  --light: #C9A46A;
+  --accent: #E6C98A;
+}
+
+.pokemon-ice {
+  --dark: #1F4F5F;
+  --light: #A8DCE7;
+  --accent: #D8F7FF;
+}
+
+.pokemon-fighting {
+  --dark: #5B1A1A;
+  --light: #D47A7A;
+  --accent: #FF9A9A;
+}
+
+.pokemon-psychic {
+  --dark: #5A0F3D;
+  --light: #E38ACB;
+  --accent: #FFB3E6;
+}
+
+.pokemon-ghost {
+  --dark: #2E1A47;
+  --light: #9E8ACF;
+  --accent: #C6B7F2;
+}
+
+.pokemon-dragon {
+  --dark: #1E2A6D;
+  --light: #7D8FE8;
+  --accent: #AAB7FF;
+}
+
+-dark {
+  --dark: #1C1C1C;
+  --light: #7A7A7A;
+  --accent: #A0A0A0;
+}
+
+-steel {
+  --dark: #2F3A3F;
+  --light: #AAB7BF;
+  --accent: #D6E1E8;
+}
+
+-normal {
+  --dark: #4A4A4A;
+  --light: #CFCFCF;
+  --accent: #E8E8E8;
+}
+
