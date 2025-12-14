@@ -5,60 +5,72 @@
     font-family: 'Archivo Narrow';
 }
 body {
-  display: flex;
-  justify-content: center;  
-  align-items: center;     
-  height: 100vh;    
-  >div{
     display: flex;
-    flex-direction:row;
-    width: auto;
+    justify-content: center;  
+    align-items: center;     
+    height: 100vh;  
+    background: linear-gradient(-45deg, #a1045a, #2C041c, #feeeec);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    >div{
+        display: flex;
+        flex-direction:column;
+        width: auto;
   }  
 }
-nav{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
-section{
+.parent {
+  perspective: 1000px;
+  margin-bottom: 5em;
+}
+
+.pokemon{
+    position: relative;
     background: linear-gradient(135deg, var(--dark), var(--light));
     border: var(--accent) solid 1em;
+    box-shadow: 0 20px 30px var(--dark),  
+    inset 0 0 50px rgba(255, 255, 255, 0.1);
     color: var(--accent);
-    height: 450px;
+    height: 500px;
     width: 350px;
     margin: 0 auto;
     border-radius: 2em;
     display: block;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    background-size: 600px;
+    background-position: 0 0, 0 0;
+
     article{
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-radius: .1em;
-        padding: .5em 2em;
+        padding: 1em 2em .5em 2em;
         width: 100%;
+        transition: all 0.5s ease-in-out;
+        transform-style: preserve-3d;
         h1{
             font-size: 1.5em;
+            transform: translate3d(0px, 0px, 30px);
+            text-shadow: 0 0 0 var(--dark);
         }
         p{
             font-size: .8em;
-            span{
-                font-size: 2em;
-            }
-        }
-    }
-    article{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: .1em;
-        padding: .5em 2em;
-        width: 100%;
-        h1{
-            font-size: 1.5em;
-        }
-        p{
-            font-size: .8em;
+            transform: translate3d(0px, 0px, 30px);
+            text-shadow: 0 0 0 var(--dark);
             span{
                 font-size: 2em;
             }
@@ -69,57 +81,106 @@ section{
         width:90% ;
         margin: 0 auto;
         border-radius: 1em;
-    
+        transform: translate3d(0, 0, 30px);
+        transition: transform 0.3s ease, box-shadow .3s ease;
+        box-shadow: 0 0 0 var(--dark);
     }
     img{
         display:block;
-        width: 50%;
+        width: 80%;
         margin: 1em auto;
         height: auto;
-       
     }
+
     ul{
         display: flex;
+        flex-direction: row;
         list-style: none;
         gap: 1em;
         margin: 2em 1em;
+        perspective: 1000px;
         li{
-            span:nth-of-type(1){
+            display: flex;
+            align-items: center;
+            span{
                 border-radius: 50%  ;
                 width: 2.5em;
                 height: 2.5em;
                 display: flex;              
                 justify-content: center;    
                 align-items: center; 
-    
+                background: radial-gradient(circle at top left, var(--light), var(--dark));
+                display: inline-flex;
             }
-            span:nth-of-type(2){
+            
+            p{
                 font-size: 1em ;
                 font-weight: 600;
                 margin-left:.3em ;
             }
+        }
     }
-    
+    aside {
+        color: var(--dark);
+        display: flex;
+        background: linear-gradient(#959595, #D9D9D9 ,#959595);
+        height: 2em;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2em;
+        font-size: 1em;
+        font-weight: 600; 
     }
 }
 
-aside{
+.pokemon:hover {
+    background-position: 0 0, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 25deg);
+    transition: all .3s ease;
+    div{
+        box-shadow: 5px 5px 20px var(--dark);
+        transition: box-shadow 0.3s ease;
+    }
+    article {
+        h1{
+            text-shadow: 2px 2px 10px  var(--dark);
+            transition: text-shadow 0.3s ease;
+        }
+        p{
+            text-shadow: 5px 5px 5px  var(--dark);
+            transition: text-shadow 0.3s ease;
+        } 
+    }
+}
+.pokemon:hover::before{
+    opacity: 1;
+}
+
+:has(button) section{
     display: flex;
-    background: linear-gradient(#959595, #D9D9D9 ,#959595);
-    height: 2em;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2em;
-    font-size: 1em;
-    font-weight: 600;
+    gap: 3em;
+    justify-content: space-evenly;
+    button{
+        color: #feeeec;
+        background: linear-gradient(
+            to bottom right,
+            #feeeec 50%,
+             #2C041c 50%
+            );
+        background-size: 200% 330%;
+        background-position: bottom;
+        border: .1em solid #feeeec ;
+        border-radius: 2em;
+        width: 9em ;
+        height: 3em ;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    button:hover {
+        background-position: top left;
+        outline: var(--button-border);
+        color: var(--color-darker);
+  }
 }
 
-.pokemon aside {
-  color: var(--dark);
-}
-
-.pokemon li span:nth-of-type(1) {
-  background: radial-gradient(circle at top left, var(--light), var(--dark));
-  display: inline-flex;
-}
-
+/*  3d effect https://uiverse.io/Smit-Prajapati/tricky-lionfish-78 */

@@ -2,23 +2,12 @@
   --dark: rgb(30, 30, 30);
   --light: gray;
   --accent: rgb(238, 238, 238);
+  --box-shadow: 2px 2px 10px  var(--dark);
 }
 
 .pokemon-grass {
-  --dark: #096021;
-  --light: #88B695;
-  --accent: #A2D96E;
-}
-
-.pokemon-fire {
-  --dark: #601109;
-  --light: #e57373;
-  --accent: #ff9494;
-}
-
-.pokemon-grass {
-  --dark: #096021;
-  --light: #88B695;
+  --dark: #0a491c;
+  --light: #9fc4aa;
   --accent: #A2D96E;
 }
 
@@ -106,19 +95,19 @@
   --accent: #AAB7FF;
 }
 
--dark {
+.pokemon-dark {
   --dark: #1C1C1C;
   --light: #7A7A7A;
   --accent: #A0A0A0;
 }
 
--steel {
+.pokemon-steel {
   --dark: #2F3A3F;
   --light: #AAB7BF;
   --accent: #D6E1E8;
 }
 
--normal {
+.pokemon-normal {
   --dark: #4A4A4A;
   --light: #CFCFCF;
   --accent: #E8E8E8;
