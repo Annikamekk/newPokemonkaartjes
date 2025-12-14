@@ -152,9 +152,7 @@ body {
         } 
     }
 }
-.pokemon:hover::before{
-    opacity: 1;
-}
+
 
 :has(button) section{
     display: flex;
