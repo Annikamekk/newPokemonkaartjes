@@ -3,7 +3,7 @@ import { ref, onMounted, watch, computed } from 'vue'
 
 const pokemon = ref(null)
 const currentPokemonId = ref(1)
-
+ 
 async function fetchPokemon() {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentPokemonId.value}`)
   pokemon.value = await res.json()
@@ -21,7 +21,6 @@ function prevPokemon() {
 function nextPokemon() {
   if (currentPokemonId.value < 1010) currentPokemonId.value++ 
 }
-
 
 const formatId = (id) => `#${id.toString().padStart(3, '0')}`
 const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
@@ -67,7 +66,6 @@ function handleMouseMove(e) {
   const x = (e.clientX - rect.left) / rect.width
   const y = (e.clientY - rect.top) / rect.height
 
-  // max 15 graden rotatie
   const rotateX = (y - 0.5) * 30
   const rotateY = (x - 0.5) * -30
 

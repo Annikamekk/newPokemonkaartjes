@@ -2,7 +2,6 @@
   --dark: rgb(30, 30, 30);
   --light: gray;
   --accent: rgb(238, 238, 238);
-  --box-shadow: 2px 2px 10px  var(--dark);
 }
 
 .pokemon-grass {
