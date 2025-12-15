@@ -19,7 +19,7 @@ function prevPokemon() {
 }
 
 function nextPokemon() {
-  if (currentPokemonId.value < 1010) currentPokemonId.value++ // max Pokémon ID (afhankelijk van PokeAPI)
+  if (currentPokemonId.value < 1010) currentPokemonId.value++ 
 }
 
 
@@ -36,7 +36,6 @@ const typeClass = computed(() => {
   if (!pokemon.value) return 'pokemon-default'
   return `pokemon-${pokemon.value.types[0].type.name}`
 })
-
 
 
 const typeIcons = {

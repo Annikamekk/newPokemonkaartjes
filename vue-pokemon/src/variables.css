@@ -12,8 +12,8 @@
 }
 
 .pokemon-fire {
-  --dark: #601109;
-  --light: #e57373;
+  --dark: #ca2f1d;
+  --light: #e5b073;
   --accent: #ff9494;
 }
 
@@ -60,21 +60,21 @@
 }
 
 .pokemon-ground {
-  --dark: #5A3E1B;
-  --light: #C9A46A;
-  --accent: #E6C98A;
+  --dark: #28707d ;
+  --light: #84d672;
+  --accent: #46413a;
 }
 
 .pokemon-ice {
-  --dark: #1F4F5F;
+  --dark: #5d7f8b;
   --light: #A8DCE7;
   --accent: #D8F7FF;
 }
 
 .pokemon-fighting {
-  --dark: #5B1A1A;
-  --light: #D47A7A;
-  --accent: #FF9A9A;
+  --dark: #290f0f;
+  --light: #ff6969;
+  --accent: #ffc6c6;
 }
 
 .pokemon-psychic {
@@ -91,8 +91,8 @@
 
 .pokemon-dragon {
   --dark: #1E2A6D;
-  --light: #7D8FE8;
-  --accent: #AAB7FF;
+  --light: #7de8a3;
+  --accent: #ffaaaa;
 }
 
 .pokemon-dark {
